@@ -16,6 +16,7 @@ async function getCities(db) {
 
 export default function Home() {
   console.log(getCities(db))
+
   return (
     <div className={styles.container}>
       <Head>
