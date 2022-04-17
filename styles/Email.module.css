@@ -10,7 +10,61 @@
     border-radius: 10px;
     justify-content: center;
     align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
+.emailBody{
+    display: flex;
+    flex-direction: row;
+    background-color: #FEFEFE;
+    border: #969696 1px solid;
+    border-radius: 5px;
+    padding: 8px 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+    height: 50px;
+    align-items: center;
+    cursor: pointer;
+}
+.emailFrom{
+    margin: 0;
+    font-weight: bold;
+    min-width: 180px;
+    width: 180px;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.emailSubject{
+    margin: 0;
+    margin-left: 20px;
+    margin-right: 13px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.emailSnippet{
+    margin: 0;
+    font-weight: lighter;
+}
 
-  
+.read{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.unread{
+    background-color: #fff;
+}
+
+.read:hover{
+    background-color: #fff;
+}
+
+.unread:hover{
+    background-color: #F8F8F8;
+}
