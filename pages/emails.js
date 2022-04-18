@@ -4,6 +4,7 @@ import EmailList from '../components/EmailList'
 import styles from '../styles/Home.module.css'
 
 export const getStaticProps = async () => {
+  // Fetching email data from Nylas api
   const response = await fetch("https://api.nylas.com/messages?limit=10",{
       method:"GET",
       headers:{
@@ -11,7 +12,6 @@ export const getStaticProps = async () => {
       }
   })
   const data = await response.json()
-
   return {
       props: {emailList: data} 
   }

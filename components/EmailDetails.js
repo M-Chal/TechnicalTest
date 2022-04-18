@@ -10,6 +10,8 @@ function EmailDetails({email, closeEmail}) {
             <p className={styles.from}>Subject: <span className={styles.lightText}>{email.subject}</span></p>
             <p className={styles.from}>Body:</p>
             <div className={styles.emailBody}>
+                {/* Using React HTML Parser because it was a super easy solution for parsing html into something readable
+                Look how easy it is >> */}
                 <p>{ReactHtmlParser(email.body)}</p>
             </div>
             <div className={styles.close} onClick={closeEmail}>X</div>

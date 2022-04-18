@@ -1,6 +1,6 @@
 import React from 'react'
 import {useState} from 'react'
-
+import { Toaster, toast } from 'react-hot-toast'
 import styles from '../styles/Form.module.css'
 
 function Form() {
@@ -20,7 +20,6 @@ function Form() {
             location,
             comments
         }
-
         const response = await fetch("/api/sendForm",{
             method:"POST",
             headers:{
@@ -29,11 +28,10 @@ function Form() {
             },
             body: JSON.stringify(form)
         })
-
         const content = await response.json();
         
-        // Putting TOAST HERE
-
+        toast.success('Form Submitted :)')
+        // Clearing the text fields
         setName("")
         setEmail("")
         setTOC("")
@@ -44,6 +42,7 @@ function Form() {
     return (
         <div className={styles.container}>
             <h2>Form</h2>
+            <div><Toaster/></div>
             <form className={styles.form} onSubmit={sendForm}>
                 <div className={styles.row}>
                     <div className={styles.labels}>

@@ -5,9 +5,7 @@ export default async function handler(req, res){
     if(req.method !== "POST"){
         return res.status(405).send({message:"Only POST requests are Allowed"})
     }
-
     const body = JSON.parse(req.body)
-    
     try{
         const docRef = await addDoc(collection(db, "formData"), {
             fName: body.name,
@@ -15,6 +13,7 @@ export default async function handler(req, res){
             toc: body.toc,
             location: body.location,
             comments: body.comments,
+            read: false
         });
         return res.status(200).json({
             data: docRef
