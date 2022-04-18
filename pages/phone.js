@@ -4,26 +4,25 @@ import styles from '../styles/Home.module.css'
 import Sidebar from '../components/Sidebar'
 import PhoneLog from '../components/PhoneLog'
 
-// export const getStaticProps = async () => {
-//   // For some reason using the usual "/api/getCallLog" didn't work here
-//   // So I had to add the full path, We'll see if it works once deployed
-//   const response = await fetch("/api/calls",{
-//     method:"GET",
-//     headers:{
-//         "Content-Type": "applications/json",
-//     },
-//   })
-//   const data = await response.json()
-//   return {
-//     props: {log: data} 
-//   }
-// }
+export const getStaticProps = async () => {
+  const response = await fetch("https://websitefortestingstuff.com/api/calls",{
+    method:"GET",
+    headers:{
+      "Content-Type": "applications/json",
+    },
+  })
+  const data = await response.json()
+  return {
+    props: {log: data},
+    revalidate: 1,
+  }
+}
 
 function phone({log}) {
   return (
     <div className={styles.main}>
       <Sidebar />
-      {/* <PhoneLog log={log}/> */}
+      <PhoneLog log={log}/>
     </div>
   )
 }

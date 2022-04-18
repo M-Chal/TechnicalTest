@@ -13,7 +13,8 @@ export const getStaticProps = async () => {
   })
   const data = await response.json()
   return {
-      props: {emailList: data} 
+      props: {emailList: data},
+      revalidate: 1,
   }
 }
 

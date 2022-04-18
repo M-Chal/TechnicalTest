@@ -20,7 +20,8 @@ export const getStaticProps = async () => {
   });
   
   return {
-      props: {messages: formList} 
+      props: {messages: formList},
+      revalidate: 1,
   }
 }
 
