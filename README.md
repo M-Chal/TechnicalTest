@@ -51,6 +51,8 @@ It would've taken me a long time to refactor into Typescript so I just got on us
 
 Secondly, if this was the real app I would've liked to distance myself from using Nylas to read Email data. Instead opting for using an in house solution. But it was just so simple to use It probably saved days of development time and that's really what matters when delivering an MVP
 
+Used a css library like Tailwind, MUI etc and possibly added SASS. On this project I used vanilla CSS and it added unnecessary time to my development time. Using a css library would've sped up development and also made the app look nicer. 
+
 ## Features I'd add given more time/ after the MVP stage
 
 Pagination - I would've added Pagination for the email, messages and phone logs. This would greatly expand the usability of the app by being able to see all emails, phone logs and messages
