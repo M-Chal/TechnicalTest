@@ -2,6 +2,9 @@
 To run the code please clone the repo. Then run npm install
 Followed by npm run dev to run the dev server
 
+Live version can be accessed here: https://websitefortestingstuff.com/
+Please note: the ISR isn't perfect and typically needs a refresh after submitting new data. This is something I would aim to fix as a priority given more time.
+
 ## My idea for this technical test
 
 So I wanted to take the spec and take it to another level by not only designing and creating the backend 
