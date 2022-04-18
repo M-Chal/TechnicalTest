@@ -6,7 +6,7 @@ function PhoneLog({log}) {
   return (
     <div className={styles.container}>
         {log.callList.map(call => (
-            <div className={styles.logBody}>
+            <div key={call.sid} className={styles.logBody}>
                 <div className={styles.phone}>
                     <p className={styles.phoneDir}>{call.direction}</p>
                     <p className={styles.phoneNum}>{call.from}</p>
