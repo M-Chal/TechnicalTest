@@ -33,6 +33,8 @@ For obvious reasons I used Next, great for building backend features using API r
 ### Firebase
 I used this as my database of choice, I used it because I'm most familiar with it. I used it for storing the form submissions and then reading them on the other screen.
 This is interchangable with stuff like AWS Amplify, Supabase etc. It's just a case of preference
+### Digital Ocean
+I used Digital Ocean to deploy the app. It's really easy to use and what I'm familiar with. They have lots of features including live deployments when changes to the repo are made. Really cool stuff and it lets me connect my custom domain :)
 ### Nylas
 Nylas is an email API. Docs can be found here: https://developer.nylas.com/docs/connectivity/email/using-email-api/#read-content-from-user-email-inboxes
 
@@ -65,4 +67,4 @@ Email Features - I mainly mean: reply to emails directly from the app, forward t
 Twilio Features - Twilio has a lot of extra services that could be implemented such as texting from the app, messaging, calling directly from the app etc.
 There is a lot of potential to use Twilio in all sorts of communication. Really powerful for outbound calls, inbound calls and text messaging.
 
-
+Auth - To secure the app I probably would've used Firebase Auth. It's super simple to implement but pretty much bulletproof and allows for all kinds of login methods. I deemed it wasn't neccessary for the MVP but if the app was put into production it would be on the top priority list.
