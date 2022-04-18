@@ -1,34 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Getting Started
+To run the code please clone the repo. Then run npm install
+Followed by npm run dev to run the dev server
 
-## Getting Started
+## My idea for this technical test
 
-First, run the development server:
+So I wanted to take the spec and take it to another level by not only designing and creating the backend 
+But going ahead and designing the full app along with front end and back end.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+I wanted to showcase my skills by building a barebones MVP in under 4 days
+I focused on the core features and expanded on a few where I saw fit
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+I hope this is a good show of my skills and ability, I hope you enjoy reading through and having a look at what I've created.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Starting off - Design
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+I wanted to start with designing what I was going to build.
+This helps me establish the core features and gives me a direction I need to be working towards.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+I used Figma for my designs, I'm by no means a designer but I did my best to create a basic layout to give me an idea of how I'll develop the app.
 
-## Learn More
+The file can be accessed from: https://www.figma.com/file/GgnYxfNMUtaZ3gkEn89ic3/Untitled?node-id=0%3A1
 
-To learn more about Next.js, take a look at the following resources:
+## Tech I used for the final app
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+So I'll just do a run down of all the tech I used and why I used it :)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### NextJS
+For obvious reasons I used Next, great for building backend features using API routes, SSR + more
+### Firebase
+I used this as my database of choice, I used it because I'm most familiar with it. I used it for storing the form submissions and then reading them on the other screen.
+This is interchangable with stuff like AWS Amplify, Supabase etc. It's just a case of preference
+### Nylas
+Nylas is an email API. Docs can be found here: https://developer.nylas.com/docs/connectivity/email/using-email-api/#read-content-from-user-email-inboxes
 
-## Deploy on Vercel
+I decided to go with Nylas because it was an easy of the shelf solution for reading emails with an easy api endpoint. 
+If I had more time I would've created this service from scratch using node and express but it would've added considerable development time.
+This solution was exactly what I needed to read email data :)
+### ReactHtmlParser
+So this one goes hand in hand with Nylas. Nylas gives me the email body in pure unformatted HTML and ReactHTMLParser parses the HTML into good looking email format. It's really performant and super easy to implement: just one line!
+### Twilio API 
+So I used Twilio for recieving the call data to the Twilio phone number. Mainly call logs with incoming and outgoing calls and timestamps but there are so many features that can be implemented from using the api. Lots of potential.
+Docs can be found here: https://www.twilio.com/docs/voice/tutorials/how-to-retrieve-call-logs-node-js
+### React Hot Toast
+This is a really simple library I added to add a confirmation message once the user submitted the form.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Things I would've done differently for next time
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Number one thing I would do next time would be to use Typescript, I regret not doing it this time round but I was halfway through once I realised my mistake. 
+It would've taken me a long time to refactor into Typescript so I just got on using regular JS.
+
+Secondly, if this was the real app I would've liked to distance myself from using Nylas to read Email data. Instead opting for using an in house solution. But it was just so simple to use It probably saved days of development time and that's really what matters when delivering an MVP
+
+## Features I'd add given more time/ after the MVP stage
+
+Pagination - I would've added Pagination for the email, messages and phone logs. This would greatly expand the usability of the app by being able to see all emails, phone logs and messages
+
+Email Features - I mainly mean: reply to emails directly from the app, forward the emails, pin them, delete them etc. Most of these features could be implemented using the Nylas API but again I would've liked to have created this in house and have those features.
+
+Twilio Features - Twilio has a lot of extra services that could be implemented such as texting from the app, messaging, calling directly from the app etc.
+There is a lot of potential to use Twilio in all sorts of communication. Really powerful for outbound calls, inbound calls and text messaging.
+
+
